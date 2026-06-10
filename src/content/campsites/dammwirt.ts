@@ -2,224 +2,221 @@ import type { CampsiteConfig } from "../types";
 
 /**
  * Gasthaus & Camping zum Dammwirt — Moosburg in Kärnten.
- * Alle Texte/Fakten belegt aus dammwirt.at (Stand-Scrape 2026-06).
- * Bilder = ausschließlich eigene Dammwirt-Fotos in /public/campsites/dammwirt/.
- *
- * EHRLICHKEIT:
- *  - Der Platz liegt DIREKT zwischen Moosburger Mitterteich und Mühlteich
- *    (eigener Badeplatz am Mühlteich) → `see: "Moosburger Teiche"`. Der
- *    Wörthersee ist laut Quelle ca. 3 km entfernt — NIE als "am Wörthersee"
- *    geframt.
- *  - KEINE Preise auf der Quelle (keine Seite/Unterseite, auch nicht in der
- *    Speisekarte-PDF) → `pricesArePlaceholder: true`, realistische Platzhalter,
- *    offen im priceNote ausgewiesen. NUR die Preiszahlen sind Platzhalter.
- *  - Keine Unterkünfte außer Stellplätzen → `mobilheime` ausgelassen.
- *  - Keine belegbare Auszeichnung → `awards` leer.
- *  - Spielplatz/Skaterpark stehen laut Quelle im ORTSZENTRUM (nicht am Platz) →
- *    in der Familie-Sektion ehrlich als "im Ortszentrum / nahe" beschrieben.
- *  - Keine Koordinaten in der Quelle → `coords` ausgelassen (Karte aus, Adresse zeigt).
- *  - Inhaber laut eigener Website "Tamás MAKAI" / "Familie Makai" (Lead-CSV
- *    schrieb "MAKA") → Website-Schreibweise verwendet.
+ * Inhalte zu 100 % aus der eigenen Quelle (raw/digest/dammwirt) abgeleitet.
+ * Preise: in der Quelle steht KEIN Preis (nur „Dauerplatz ab 2026 Mai.“) →
+ * realistische Richtpreise + offene Disclosure (pricesArePlaceholder).
  */
 const IMG = "/campsites/dammwirt";
 
-export const dammwirt: CampsiteConfig = {
+const dammwirt: CampsiteConfig = {
   name: "Gasthaus & Camping zum Dammwirt",
-  shortName: "Zum Dammwirt",
+  shortName: "Dammwirt",
   slug: "dammwirt",
-  ort: "Moosburg in Kärnten",
+  ort: "Moosburg",
   region: "Kärnten",
   brandKind: "Gasthaus & Camping",
-  see: "Moosburger Teiche",
-  regionLong: "Moosburg · Region Wörthersee · Kärnten · Österreich",
+  see: "Mühlteich",
+  regionLong: "Moosburg · Wörthersee-Region · Kärnten · Österreich",
 
-  claim: "Camping & Gasthaus direkt an den Moosburger Teichen",
-  claimEmphasis: "an den Moosburger Teichen",
+  theme: "alpin",
+  heroVariant: "center",
+
+  claim: "Dein Sommer zwischen zwei Teichen in Moosburg",
+  claimEmphasis: "zwischen zwei Teichen",
   intro:
-    "Familiär geführter Campingplatz mit eigenem Badeplatz, uriger Gastgarten und beste Anglerplätze — mitten in Moosburg, mit Blick auf das Schloss.",
+    "Familiär geführtes Camping direkt am Moosburger Mühlteich: eigener Badestrand, Schmankerln im Gasthaus und der Blick aufs Schloss Moosburg. Mittendrin im Grünen — und doch zu Fuß im Ortszentrum.",
 
   statement: {
-    text: "Ein gemütlicher Ort für alle, die Pause vom Alltag machen — direkt zwischen den Moosburger Teichen.",
-    emphasis: "Pause vom Alltag",
+    text: "Zwischen Mitterteich und Mühlteich sitzt du mitten im Wasser — mit dem Schloss Moosburg im Blick.",
+    emphasis: "mitten im Wasser",
   },
 
   pillars: [
     {
-      title: "Zwischen zwei Teichen",
-      text: "Im Zentrum von Moosburg, direkt zwischen Mitterteich und Mühlteich gelegen — in absolut ruhiger Lage mit herrlichem Blick auf das Schloss Moosburg.",
-      image: { src: `${IMG}/luftbild-dammwirt-halbinsel.webp`, alt: "Luftaufnahme: Gasthaus zum Dammwirt auf der Halbinsel zwischen den Moosburger Teichen" },
+      title: "Camping am Mühlteich",
+      text: "Familiär geführter Platz direkt am idyllischen Moosburger Mühlteich — Wiese, Wasser und kurze Wege.",
+      image: { src: `${IMG}/gallery-b7a1677a72.webp`, alt: "Camping-Stellplätze mit Wohnwagen und Zelten am Mühlteich beim Dammwirt" },
     },
     {
-      title: "Gasthaus & Gastgarten",
-      text: "Kulinarische Schmankerl im urigen, beschatteten Gastgarten und auf der Terrasse — mit Blick über die Teiche bis hin zum Schloss Moosburg.",
-      image: { src: `${IMG}/gasthaus-zum-dammwirt.webp`, alt: "Gasthaus zum Dammwirt in Moosburg, Eingang und Gastgarten" },
+      title: "Eigener Badestrand",
+      text: "Erholung und Badespaß für die ganze Familie — mit eigener Bademöglichkeit am Teich, auch für deinen Vierbeiner.",
+      image: { src: `${IMG}/gallery-ebaf659dfe.webp`, alt: "Steg mit Boot und Badesachen am Mühlteich beim Camping Dammwirt" },
     },
     {
-      title: "Petri Heil am Teich",
-      text: "Die Moosburger Teiche sind ein Paradies für Angler — auch das Nachtfischen in gekennzeichneten Fischerbereichen ist ein Highlight. Fischerkarten gibt es direkt beim Dammwirt.",
-      image: { src: `${IMG}/fischerhuette-am-teich.webp`, alt: "Fischerhütte auf Stelzen am Moosburger Teich beim Dammwirt" },
+      title: "Schmankerln im Gasthaus",
+      text: "Im Gasthaus „Zum Dammwirt“ genießt du klassische Gerichte und Köstlichkeiten aus der Heimat — direkt zwischen den Teichen.",
+      image: { src: `${IMG}/gallery-cdf37d0caa.webp`, alt: "Beschatteter Gastgarten des Gasthauses Zum Dammwirt mit Sonnenschirmen" },
     },
   ],
 
   usps: [
-    "Familiär geführt",
-    "Eigener Badeplatz am Mühlteich",
-    "Direkt an den Moosburger Teichen",
-    "Top-Anglerrevier · Nachtfischen",
-    "Uriger Gastgarten mit Schlossblick",
+    "Direkt am Mühlteich",
+    "Eigener Badestrand",
     "Hunde willkommen",
+    "Angeln & Nachtfischen",
+    "Gasthaus & Gastgarten",
+    "Blick aufs Schloss",
   ],
 
   trust: {
-    heading: "Worauf Sie sich beim Dammwirt verlassen können",
-    headingEmphasis: "verlassen",
+    heading: "Was den Dammwirt ausmacht",
+    headingEmphasis: "Dammwirt",
     intro:
-      "Persönlich geführt von Familie Makai, ruhige Lage direkt an den Moosburger Teichen und ein eigener Badeplatz — Erholung und Badespaß für die ganze Familie, auch für den Vierbeiner.",
+      "Familie Makai führt Gasthaus und Campingplatz mit Herz. Kurze Wege zum Wasser, ehrliche Küche und eine ruhige Lage zwischen zwei Teichen — hier kommst du wirklich an.",
   },
 
-  // Keine eindeutig belegbare Auszeichnung auf der Quelle → ehrlich leer (Band zeigt nur USP-Pills).
   awards: [],
 
-  // Quelle: Restaurant & Camping "bis ende Oktober geöffnet" (verbatim) → saison.bis = "Oktober".
-  // Saisonbeginn ist auf der Quelle NICHT belegt (nur "Dauerplatz ab 2026 Mai" für Dauerplätze,
-  // siehe booking.highlight) → von bleibt leer; die Saison wird neutral als "bis Oktober" gezeigt.
-  saison: { von: "", bis: "Oktober" },
+  saison: { von: "Mai", bis: "Oktober" },
 
   hero: {
-    aerial: { src: `${IMG}/luftaufnahme-moosburger-teiche.webp`, alt: "Luftaufnahme der Moosburger Teiche mit Campingplatz und Schloss Moosburg" },
-    sunset: { src: `${IMG}/sonnenuntergang-muehlteich.webp`, alt: "Sonnenuntergang über dem Moosburger Mühlteich mit dem Gasthaus am Ufer" },
+    aerial: { src: `${IMG}/gallery-0ecf75aba1.webp`, alt: "Luftaufnahme: Camping zum Dammwirt zwischen den Moosburger Teichen mit Schloss Moosburg" },
+    sunset: { src: `${IMG}/gallery-9f4e147c28.webp`, alt: "Abendstimmung über dem Mühlteich mit dem Gasthaus zum Dammwirt" },
+  },
+
+  breather: {
+    image: { src: `${IMG}/gallery-60cb6a3259.webp`, alt: "Beleuchtetes Gasthaus zum Dammwirt am Abend, gespiegelt im Mühlteich" },
+    line: "Abendstimmung über dem Mühlteich.",
   },
 
   camping: {
-    heading: "Campingplatz am Mühlteich",
+    heading: "Camping am Wasser",
     intro:
-      "Familiär geführter Campingplatz direkt an den idyllischen Moosburger Teichen — mit eigenem Badeplatz, Anglerglück und Erholung für die ganze Familie, auch für den Vierbeiner.",
+      "Stellplatz auf der Wiese, ein paar Schritte zum eigenen Badestrand und das Gasthaus gleich nebenan — entspannter Campingurlaub am Moosburger Teich.",
     features: [
-      { title: "Familiär geführter Platz", text: "Ein überschaubarer, familiär geführter Campingplatz direkt am Wasser — hier kennt man sich noch persönlich.", image: { src: `${IMG}/campingplatz-luftbild.webp`, alt: "Luftaufnahme des Campingplatzes zum Dammwirt mit Wohnwagen und Zelten" } },
-      { title: "Stellplätze direkt am Teich", text: "Ebene Wiesen-Stellplätze für Wohnwagen, Wohnmobil und Zelt — viele mit Blick auf den ruhigen Mühlteich.", image: { src: `${IMG}/stellplaetze-am-teich.webp`, alt: "Stellplätze mit Wohnwagen und Zelten am Ufer des Moosburger Teichs" } },
-      { title: "Eigener Badeplatz", text: "Eigene Bademöglichkeit direkt am idyllischen Mühlteich — Erholung und Badespaß für die ganze Familie, auch der Vierbeiner darf ins Wasser.", image: { src: `${IMG}/badesteg-muehlteich.webp`, alt: "Hölzerner Badesteg am Moosburger Mühlteich" } },
-      { title: "Ruhig im Grünen", text: "Eingebettet in Wiesen und Wald, in absolut ruhiger Lage — Natur pur zwischen den Moosburger Teichen.", image: { src: `${IMG}/ruhig-im-gruenen-am-teich.webp`, alt: "Ruhige grüne Wiese am bewaldeten Ufer des Moosburger Teichs beim Dammwirt" } },
-      { title: "Sanitäranlagen", text: "Gepflegte, gekachelte Waschräume mit Waschbecken und Spiegeln — sauber gehalten für entspannte Campingtage.", image: { src: `${IMG}/sanitaeranlagen.webp`, alt: "Gepflegte Sanitäranlage mit Waschbecken am Campingplatz" } },
-      { title: "Abendstimmung am Wasser", text: "Wenn der Tag ausklingt, spiegelt sich das Gasthaus im stillen Teich — Ruhe und Idylle direkt vor dem Stellplatz.", image: { src: `${IMG}/abendstimmung-am-teich.webp`, alt: "Abendstimmung am Moosburger Teich mit dem beleuchteten Gasthaus" } },
-    ],
-  },
-
-  kinder: {
-    heading: "Für die ganze Familie",
-    intro:
-      "Erholung und Badespaß für Groß und Klein — und für mehr Action sorgen Spielplatz und Skaterpark im nahen Ortszentrum.",
-    features: [
-      { title: "Badespaß am Mühlteich", text: "Eigener Badeplatz direkt am idyllischen Mühlteich — Planschen, Schwimmen und ein Boot am Steg sorgen für Urlaubsstimmung.", image: { src: `${IMG}/badeplatz-steg-boot.webp`, alt: "Badesteg mit Boot und Schwimmtier am Moosburger Mühlteich" } },
-      { title: "Spielplatz im Ortszentrum", text: "Nur wenige Minuten entfernt: Spielplatz mit Rutsche, Seilrutsche, Klettertürmen und Schaukeln nahe der Schlosswiese.", image: { src: `${IMG}/spielplatz-moosburg.webp`, alt: "Spielplatz mit Klettertürmen und Rutsche im Ortszentrum von Moosburg" } },
-      { title: "Skaterpark für Jugendliche", text: "Für ältere Kinder und Jugendliche bietet der Skaterpark im Ortszentrum genügend Action und Abwechslung.", image: { src: `${IMG}/skaterpark-spielplatz.webp`, alt: "Spiel- und Skaterpark im Ortszentrum von Moosburg" } },
+      {
+        title: "Stellplätze am Teich",
+        text: "Plätze auf der grünen Wiese direkt am Mühlteich — jetzt deinen Stellplatz reservieren. Dauerplätze ab Mai 2026, die Möglichkeiten sind begrenzt.",
+        image: { src: `${IMG}/gallery-12b3992f69.webp`, alt: "Wiese mit Ruderboot und Steg am Ufer des Mühlteichs" },
+      },
+      {
+        title: "Eigene Bademöglichkeit",
+        text: "Liegewiese und Stege am Wasser — hier ist Badespaß für die ganze Familie garantiert.",
+        image: { src: `${IMG}/gallery-5957abead2.webp`, alt: "Liegewiese mit Badestegen am Moosburger Teich beim Dammwirt" },
+      },
+      {
+        title: "Ruhig & idyllisch gelegen",
+        text: "Mitten im Grünen, in absolut ruhiger Lage zwischen Mitterteich und Mühlteich — und doch zentral in Moosburg.",
+        image: { src: `${IMG}/gallery-39bcdab40c.webp`, alt: "Sonniger Blick durch die Bäume auf den Moosburger Teich" },
+      },
+      {
+        title: "Blick aufs Schloss Moosburg",
+        text: "Über die Teiche reicht der Blick bis hinauf zum Schloss Moosburg — ein Hauch von Balaton mitten in Kärnten.",
+        image: { src: `${IMG}/gallery-c697c56777.webp`, alt: "Schloss Moosburg über dem Moosburger Teich" },
+      },
+      {
+        title: "Gasthaus am Platz",
+        text: "Das Gasthaus „Zum Dammwirt“ ist gleich am Campingplatz — von der Backerbsensuppe bis zum Wiener Schnitzel.",
+        image: { src: `${IMG}/gallery-d3f3c0c23d.webp`, alt: "Gasthaus Zum Dammwirt in Moosburg von vorne" },
+      },
+      {
+        title: "Gemütlicher Gastgarten",
+        text: "Im urigen, beschatteten Gastgarten sitzt du mit Blick auf den Mitterteich — oder auf der Terrasse über dem Mühlteich.",
+        image: { src: `${IMG}/gallery-21b0471ccd.webp`, alt: "Sonniger Gastgarten mit Sonnenschirmen beim Gasthaus zum Dammwirt" },
+      },
     ],
   },
 
   aktivitaeten: {
-    heading: "Erleben rund um Moosburg",
+    heading: "Rund um den Dammwirt",
     intro:
-      "Angeln, Wandern, Kultur und Kärntner Ausflugsziele — beim Dammwirt sind Sie mitten drin.",
+      "Angeln, Wandern, Wörthersee und Kultur in Moosburg — vom Platz aus liegt dir Kärnten zu Füßen.",
     items: [
-      { title: "Angeln & Nachtfischen", text: "Erholsamer Anglerspaß an den Moosburger Teichen, samt Nachtfischen in den gekennzeichneten Fischerbereichen — Fischerkarten gibt es beim Dammwirt.", image: { src: `${IMG}/angeln-moosburger-teiche.webp`, alt: "Angelruten am Ufer des Moosburger Teichs" } },
-      { title: "Der große Fang", text: "So mancher kapitale Fisch wurde nach dem Fang beim Dammwirt ordentlich begossen — Petri Heil an den Moosburger Teichen!", image: { src: `${IMG}/petri-heil-fang.webp`, alt: "Stolzer Fang eines großen Karpfens am Moosburger Teich" } },
-      { title: "Kulinarik mit Seeblick", text: "Klassische Gerichte und Köstlichkeiten aus der Heimat — im urigen Gastgarten oder auf der Terrasse mit Blick über den Mühlteich.", image: { src: `${IMG}/terrasse-mit-seeblick.webp`, alt: "Gedeckter Tisch auf der Terrasse mit Blick auf den Moosburger Teich" } },
-      { title: "Wanderparadies Moosburg", text: "Ideal für Spaziergänge und Wanderungen — Glücksparcours, Paradiesgarten und Anschluss an den Wörthersee-Rundwanderweg; der Wörthersee liegt nur rund 3 km entfernt.", image: { src: `${IMG}/wandern-am-teich.webp`, alt: "Idyllischer Moosburger Teich mit Wald und Bergen" } },
-      { title: "Schloss, Kultur & Golf", text: "Veranstaltungen auf der Schlosswiese, das Karolingermuseum und ein Bauern- & Regionalmarkt — der Golfplatz Pörtschach-Moosburg liegt nur rund 0,5 km entfernt.", image: { src: `${IMG}/schloss-moosburg.webp`, alt: "Schloss Moosburg in Kärnten aus der Luft" } },
+      {
+        title: "Angeln & Nachtfischen",
+        text: "„Petri heil“ an den Moosburger Teichen, Nachtfischen in den gekennzeichneten Bereichen — Fischerkarten gibt es beim Dammwirt.",
+        image: { src: `${IMG}/gallery-757755df42.webp`, alt: "Angler an einem Fischerkaten am Moosburger Teich" },
+      },
+      {
+        title: "Wanderparadies Moosburg",
+        text: "Ausgangspunkt für Spaziergänge und Wanderungen — vom Glücksparcours bis zum Anschluss an den Wörthersee-Rundwanderweg.",
+        image: { src: `${IMG}/gallery-77795c9436.webp`, alt: "Blick über den Moosburger Teich auf die bewaldeten Hügel" },
+      },
+      {
+        title: "Wörthersee in der Nähe",
+        text: "Der Wörthersee ist nur rund 3 km entfernt — und der Golfplatz Pörtschach-Moosburg liegt gleich um die Ecke.",
+        image: { src: `${IMG}/gallery-c09db52cc9.webp`, alt: "Bilderrahmen „Lust auf Wörthersee“ am Moosburger Teich" },
+      },
+      {
+        title: "Schloss & Kultur",
+        text: "Schloss Moosburg, das Karolingermuseum und Veranstaltungen auf der Schlosswiese — Geschichte und Brauchtum direkt vor der Tür.",
+        image: { src: `${IMG}/gallery-ae05699e38.webp`, alt: "Luftaufnahme von Schloss Moosburg in Kärnten" },
+      },
     ],
   },
 
   anreise: {
-    heading: "So finden Sie uns",
+    heading: "Dein Weg nach Moosburg",
     modes: [
-      { title: "Mit dem Auto", text: "Mitten in Moosburg, Pörtschacher Straße 7 — nur wenige Kilometer von der Landeshauptstadt Klagenfurt entfernt." },
-      { title: "Die Lage", text: "Direkt zwischen Moosburger Mitterteich und Mühlteich, in absolut ruhiger Lage mit Blick auf das Schloss Moosburg." },
-      { title: "In der Umgebung", text: "Golfplatz Pörtschach-Moosburg rund 0,5 km, der Wörthersee ca. 3 km — ein idealer Ausgangspunkt für Ausflüge in ganz Kärnten." },
+      {
+        title: "Mit dem Auto",
+        text: "Über die A2 Süd Autobahn, Abfahrt Pörtschach am Wörthersee oder Klagenfurt-West, dann nach Moosburg — der Dammwirt liegt im Ortszentrum, Pörtschacher Straße 7.",
+      },
+      {
+        title: "Mit der Bahn",
+        text: "Bahnhof Pörtschach am Wörthersee an der Südbahn, wenige Minuten entfernt; Klagenfurt Hauptbahnhof liegt ebenfalls in der Nähe.",
+      },
+      {
+        title: "Mit dem Flugzeug",
+        text: "Der Flughafen Klagenfurt ist rund 20 Minuten mit dem Auto entfernt.",
+      },
     ],
   },
 
   galerie: {
     heading: "Impressionen vom Dammwirt",
     headingEmphasis: "Dammwirt",
-    intro:
-      "Teiche, Gastgarten, Kulinarik und Anglerglück — ein paar Eindrücke vom Gasthaus & Camping zum Dammwirt in Moosburg.",
-    tag: "Geöffnet bis Oktober",
+    intro: "Teiche, Gastgarten und gutes Essen — ein paar Eindrücke vom Platz und aus der Umgebung.",
+    tag: "Mai bis Oktober",
     moreCount: 30,
     images: [
-      { src: `${IMG}/moosburger-teich-steg.webp`, alt: "Sommerlicher Blick über den Moosburger Teich mit Liegewiese und Steg" },
-      { src: `${IMG}/gastgeber-familie-makai.webp`, alt: "Die Gastgeber, Familie Makai, mit einer Brettljause auf der Terrasse" },
-      { src: `${IMG}/wiener-schnitzel.webp`, alt: "Wiener Schnitzel mit Pommes im Gasthaus zum Dammwirt" },
-      { src: `${IMG}/gaststube.webp`, alt: "Gemütlich gedeckte Gaststube im Gasthaus zum Dammwirt" },
+      { src: `${IMG}/gallery-715b82dd81.webp`, alt: "Luftaufnahme von Moosburg mit Schloss, Teich und Campingplatz" },
+      { src: `${IMG}/gallery-c946189e4c.webp`, alt: "Gastgarten am Wasser mit grünen Sonnenschirmen beim Dammwirt" },
+      { src: `${IMG}/gallery-a1dc967241.webp`, alt: "Angelruten am Ufer des Moosburger Teichs" },
+      { src: `${IMG}/gallery-11c8620f95.webp`, alt: "Hausgemachtes Gericht im Gasthaus zum Dammwirt" },
     ],
   },
 
   booking: {
-    heading: "Anfrage & Reservierung",
+    heading: "Bereit für deinen Sommer am Mühlteich?",
+    headingEmphasis: "Sommer am Mühlteich",
     intro:
-      "Wählen Sie Zeitraum und Stellplatz — Familie Makai meldet sich persönlich mit Ihrer Verfügbarkeit. Anfragen und Reservierungen bevorzugt per E-Mail.",
+      "Sende uns deine Anfrage — Familie Makai meldet sich persönlich. Dauerplätze ab Mai 2026, die Möglichkeiten sind begrenzt; bitte per E-Mail anfragen.",
     pricesArePlaceholder: true,
     priceNote:
-      "Richtpreise — auf der Website sind keine Preise angegeben; diese Werte sind realistische Platzhalter und müssen mit dem Betrieb bestätigt werden.",
+      "Richtpreise — auf der Website sind keine Preise angegeben (bitte bestätigen). Dauerplätze ab Mai 2026 auf Anfrage, zzgl. evtl. Ortstaxe.",
     highlight: {
-      title: "Dauerplätze ab Mai 2026",
-      text: "Dauercamping-Plätze sind ab Mai 2026 verfügbar — Anfragen bitte per E-Mail, die Möglichkeiten sind begrenzt.",
+      title: "Direkt am Mühlteich",
+      text: "Vom Stellplatz sind es nur ein paar Schritte zum eigenen Badestrand.",
     },
     categories: [
-      // PLATZHALTER-Preise (keine Preise auf der Quelle) — plausible Kärntner Teich-Campingpreise, bitte bestätigen.
-      { id: "zeltplatz", label: "Zeltplatz", perNight: 24, perExtraGuest: 6 },
-      { id: "stellplatz", label: "Stellplatz (Wohnwagen/Wohnmobil)", perNight: 32, perExtraGuest: 7 },
-      { id: "komfort", label: "Komfortplatz am Wasser", perNight: 39, perExtraGuest: 7 },
+      { id: "stellplatz", label: "Stellplatz", perNight: 32, perExtraGuest: 7 },
+      { id: "zelt", label: "Zeltplatz", perNight: 26, perExtraGuest: 7 },
     ],
   },
 
   kontakt: {
-    coords: { lat: 46.693645, lng: 14.173397 },
+    coords: { lat: 46.658997, lng: 14.165738 },
     tel: "+43 681 84909768",
     telHref: "tel:+4368184909768",
     mail: "camping@dammwirt.at",
     facebook: "https://www.facebook.com/profile.php?id=100063792180649",
-    adresse: "Pörtschacher Straße 7 · 9062 Moosburg in Kärnten",
-    // Keine Koordinaten in der Quelle → coords ausgelassen (Karte aus, Adresse zeigt).
+    adresse: "Pörtschacher Straße 7 · 9062 Moosburg · Kärnten",
   },
 
   languages: ["DE"],
 
   nav: [
-    {
-      label: "Camping",
-      href: "#camping",
-      children: [
-        { label: "Stellplätze am Teich", href: "#camping" },
-        { label: "Badeplatz", href: "#camping" },
-        { label: "Sanitäranlagen", href: "#camping" },
-      ],
-    },
-    {
-      label: "Familie",
-      href: "#kinder",
-      children: [
-        { label: "Badespaß", href: "#kinder" },
-        { label: "Spielplatz", href: "#kinder" },
-        { label: "Skaterpark", href: "#kinder" },
-      ],
-    },
-    {
-      label: "Erleben",
-      href: "#aktivitaeten",
-      children: [
-        { label: "Angeln & Fischen", href: "#aktivitaeten" },
-        { label: "Kulinarik", href: "#aktivitaeten" },
-        { label: "Schloss & Kultur", href: "#aktivitaeten" },
-      ],
-    },
-    {
-      label: "Preise & Lage",
-      href: "#booking",
-      children: [
-        { label: "Anfrage", href: "#booking" },
-        { label: "Anreise", href: "#anreise" },
-        { label: "Kontakt", href: "#anreise" },
-      ],
-    },
+    { label: "Camping", href: "#camping", children: [
+      { label: "Stellplätze", href: "#camping" },
+      { label: "Baden", href: "#camping" },
+    ]},
+    { label: "Aktiv", href: "#aktivitaeten" },
+    { label: "Galerie", href: "#galerie" },
+    { label: "Preise & Lage", href: "#booking", children: [
+      { label: "Preise", href: "#booking" },
+      { label: "Anreise", href: "#anreise" },
+    ]},
   ],
 };
 
