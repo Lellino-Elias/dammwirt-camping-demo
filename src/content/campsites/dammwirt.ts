@@ -18,7 +18,6 @@ const dammwirt: CampsiteConfig = {
   see: "Mühlteich",
   regionLong: "Moosburg · Wörthersee-Region · Kärnten · Österreich",
 
-  theme: "alpin",
   heroVariant: "center",
 
   claim: "Dein Sommer zwischen zwei Teichen in Moosburg",
