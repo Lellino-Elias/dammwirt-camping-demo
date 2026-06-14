@@ -85,7 +85,7 @@ const dammwirt: CampsiteConfig = {
     features: [
       {
         title: "Stellplätze am Teich",
-        text: "Plätze auf der grünen Wiese direkt am Mühlteich — jetzt deinen Stellplatz reservieren. Dauerplätze ab Mai 2026, die Möglichkeiten sind begrenzt.",
+        text: "Stellplätze auf der Wiese direkt am Mühlteich — Dauerplätze ab Mai 2026, die Möglichkeiten sind begrenzt.",
         image: { src: `${IMG}/gallery-12b3992f69.webp`, alt: "Wiese mit Ruderboot und Steg am Ufer des Mühlteichs" },
       },
       {
