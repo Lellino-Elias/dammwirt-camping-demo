@@ -42,9 +42,9 @@ const dammwirt: CampsiteConfig = {
       image: { src: `${IMG}/gallery-ebaf659dfe.webp`, alt: "Steg mit Boot und Badesachen am Mühlteich beim Camping Dammwirt" },
     },
     {
-      title: “Schmankerln im Gasthaus”,
-      text: “Im Gasthaus „Zum Dammwirt” genießt du klassische Gerichte und Köstlichkeiten aus der Heimat — direkt zwischen den Teichen.”,
-      image: { src: `${IMG}/gallery-b0efebc7c7.webp`, alt: “Gemütliche Gaststube im Gasthaus Zum Dammwirt mit gedeckten Tischen und warmer Beleuchtung” },
+      title: "Schmankerln im Gasthaus",
+      text: "Im Gasthaus „Zum Dammwirt" genießt du klassische Gerichte und Köstlichkeiten aus der Heimat — direkt zwischen den Teichen.",
+      image: { src: `${IMG}/gallery-b0efebc7c7.webp`, alt: "Gemütliche Gaststube im Gasthaus Zum Dammwirt mit gedeckten Tischen und warmer Beleuchtung" },
     },
   ],
 
