@@ -74,7 +74,7 @@ const dammwirt: CampsiteConfig = {
   },
 
   breather: {
-    image: { src: `${IMG}/gallery-60cb6a3259.webp`, alt: "Beleuchtetes Gasthaus zum Dammwirt am Abend, gespiegelt im Mühlteich" },
+    image: { src: `${IMG}/gallery-8519e7a9d6.webp`, alt: "Gasthaus zum Dammwirt am Abend mit erleuchtetem Speisesaal direkt am Mühlteich" },
     line: "Abendstimmung über dem Mühlteich.",
   },
 
@@ -111,7 +111,7 @@ const dammwirt: CampsiteConfig = {
       {
         title: "Gemütlicher Gastgarten",
         text: "Im urigen, beschatteten Gastgarten sitzt du mit Blick auf den Mitterteich — oder auf der Terrasse über dem Mühlteich.",
-        image: { src: `${IMG}/gallery-21b0471ccd.webp`, alt: "Sonniger Gastgarten mit Sonnenschirmen beim Gasthaus zum Dammwirt" },
+        image: { src: `${IMG}/gallery-ef91042f8e.webp`, alt: "Belebter Gastgarten beim Gasthaus zum Dammwirt mit Gästen unter Sonnenschirmen" },
       },
     ],
   },
@@ -170,9 +170,11 @@ const dammwirt: CampsiteConfig = {
     moreCount: 30,
     images: [
       { src: `${IMG}/gallery-715b82dd81.webp`, alt: "Luftaufnahme von Moosburg mit Schloss, Teich und Campingplatz" },
-      { src: `${IMG}/gallery-c946189e4c.webp`, alt: "Gastgarten am Wasser mit grünen Sonnenschirmen beim Dammwirt" },
+      { src: `${IMG}/gallery-2ee2ff5db6.webp`, alt: "Terrasse des Gasthauses zum Dammwirt mit Blick auf den Mühlteich und Ruderboot" },
       { src: `${IMG}/gallery-a1dc967241.webp`, alt: "Angelruten am Ufer des Moosburger Teichs" },
-      { src: `${IMG}/gallery-11c8620f95.webp`, alt: "Hausgemachtes Gericht im Gasthaus zum Dammwirt" },
+      { src: `${IMG}/gallery-8d9f28c718.webp`, alt: "Käsespätzle in der Pfanne im Gasthaus zum Dammwirt" },
+      { src: `${IMG}/gallery-bec4fe97e7.webp`, alt: "Wiener Schnitzel mit Pommes im Gasthaus zum Dammwirt" },
+      { src: `${IMG}/gallery-0fc959d828.webp`, alt: "Gedeckte Gaststube im Gasthaus zum Dammwirt mit grünen Servietten" },
     ],
   },
 
